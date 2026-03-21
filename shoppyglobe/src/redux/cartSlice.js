@@ -5,6 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
         items:[]
     },
     reducers:{
+        // to add items to array if it not exists else increase quantity if already present
         addItem:(state, action)=>{
             const existingItem= state.items.find(
                 item=> item.id == action.payload.id
@@ -17,12 +18,13 @@ import { createSlice } from "@reduxjs/toolkit";
                     quantity:1})
             }
         },
+        //  to remove item from cart based on the id provided
         removeItem : (state,action)=>{
             state.items = state.items.filter(
                 item => item.id !== action.payload
             )
         },
-
+        //  to clear the cart completely
         clearCart : (state)=>{
             state.items = []
         }

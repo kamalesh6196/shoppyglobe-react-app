@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+//  customized hook to fetch data using url
 function useProducts(){
     const [products , setProducts] = useState([])
 
@@ -7,6 +7,7 @@ function useProducts(){
 
     useEffect(()=>{
         async function fetchProducts(){
+            // set products array if fetching sucessful
             try{
                 const response= await fetch("https://dummyjson.com/products")
 
@@ -15,6 +16,7 @@ function useProducts(){
                 setProducts(data.products)
 
             }
+            //  setting error if exists
             catch(err){
                 setError("failed to fetch products")
             }
@@ -23,6 +25,8 @@ function useProducts(){
 
         fetchProducts()
     },[])
+
+    return {products,error}
 }
 
 export default useProducts;
