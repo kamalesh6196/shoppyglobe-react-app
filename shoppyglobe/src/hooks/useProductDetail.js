@@ -14,9 +14,9 @@ function useProductDetail(id){
         }
         fetchProduct()
 
-        return product
     },[id])
 
+    return product
 }
 
 export default useProductDetail
