@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { clearCart } from "../redux/cartSlice"
+import "./Checkout.css"
 
 function Checkout() {
     //  fetching items from the store using useSelector hook
@@ -18,7 +19,7 @@ function Checkout() {
         navigate("/")
     }
   return (
-    <div>
+    <div className="checkout">
         <h2>Checkout</h2>
          {/* input to colect name and address of the user */}
         <input type="text" placeholder="name" />
