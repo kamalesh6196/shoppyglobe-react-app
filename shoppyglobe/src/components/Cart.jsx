@@ -8,7 +8,7 @@ function Cart() {
 
     //  returning empty cart message if the cart is empty
     if(items.length == 0) return <h2>Cart Empty</h2>    
-    
+
   return (
     <div>
         {   
@@ -19,7 +19,7 @@ function Cart() {
             ))
         }
           {/* Link to go to the checkout component */}
-        <Link to="/chekout">Go to Checkout</Link>
+        <Link to="/checkout">Go to Checkout</Link>
     </div>
   )
 }
