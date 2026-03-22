@@ -7,3 +7,13 @@
 body{
     background-color: whitesmoke;
 }
+
+@media(max-width:600px){
+   .header{
+    flex-direction: column;
+  }
+
+  .product-container{
+    grid-template-columns: 1fr;
+  }
+}
