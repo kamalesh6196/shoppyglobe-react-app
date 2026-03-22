@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { addItem, decreaseQuantity, increaseQuantity, removeItem } from "../redux/cartSlice"
+import { decreaseQuantity, increaseQuantity, removeItem } from "../redux/cartSlice"
 import "./Cart.css"
 
 function CartItem({item}) {
