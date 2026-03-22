@@ -10,7 +10,7 @@ function ProductItem({product}) {
   return (
     <div className="product-card">
         {/* dispalying product image */}
-        <img src={product.thumbnail}  width ="150" />
+        <img src={product.thumbnail}  width ="150" alt={product.title} loading="lazy" />
 
         {/* dispalying product title*/}
         <h3>{product.title}</h3>

@@ -9,8 +9,7 @@ function CartItem({item}) {
     <div className="cart-item">
         {/* Displaying each item in the cart with it's product details */}
         <h3>{item.title}</h3>
-
-        <p>Quantity :{item.quantity}</p>
+        
         {/* button to increase the quantity of the item added to cart*/}
         <button className="qty-btn" onClick={()=> dispatch(increaseQuantity(item.id))}>+</button>
 

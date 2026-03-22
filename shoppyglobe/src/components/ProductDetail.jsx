@@ -16,7 +16,7 @@ function ProductDetail() {
     return (
         //  description about the product with it's image and details 
         <div className="detail-container">
-            <img src={product.thumbnail} width="200" />
+            <img src={product.thumbnail} width="200" alt={product.title} loading="lazy" />
             <div className="detail-info">
                 <h2>{product.title}</h2>
 
