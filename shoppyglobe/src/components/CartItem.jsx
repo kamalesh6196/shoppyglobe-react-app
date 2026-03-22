@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { addItem, removeItem } from "../redux/cartSlice"
+import { addItem, decreaseQuantity, increaseQuantity, removeItem } from "../redux/cartSlice"
 import "./Cart.css"
 
 function CartItem({item}) {
@@ -10,9 +10,16 @@ function CartItem({item}) {
         {/* Displaying each item in the cart with it's product details */}
         <h3>{item.title}</h3>
 
-        <p className="qty-btn">Quantity :{item.quantity}</p>
+        <p>Quantity :{item.quantity}</p>
         {/* button to increase the quantity of the item added to cart*/}
-        <button onClick={()=> dispatch(addItem(item))}>+</button>
+        <button className="qty-btn" onClick={()=> dispatch(increaseQuantity(item.id))}>+</button>
+
+        {/* to display quantity */}
+        <span>{item.quantity} </span>
+
+         {/* button to decrease the quantity of the item added to cart*/}
+        <button className="qty-btn" onClick={()=> dispatch(decreaseQuantity(item.id))}>-</button>
+        
          {/* button to remove item from the cart */}
         <button  onClick={()=> dispatch(removeItem(item.id))}>remove</button>
     </div>
