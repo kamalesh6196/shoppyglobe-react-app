@@ -2,12 +2,13 @@ import { useDispatch } from "react-redux"
 
 import {Link} from "react-router-dom"
 import { addItem } from "../redux/cartSlice"
+import "./ProductItem.css"
 
 function ProductItem({product}) {
   
     const dispatch = useDispatch()
   return (
-    <div>
+    <div className="product-card">
         {/* dispalying product image */}
         <img src={product.thumbnail}  width ="150" />
 
