@@ -15,8 +15,8 @@ function ProductList() {
     // to dispatch an action in redux store
      const dispatch = useDispatch()
 
-    //returning only the error if fetching fails
-    if(error) return <h2>{error}</h2>
+    //returning the error if fetching fails
+    if(error) return <h2>Error Loading products</h2>
 
   return (
     <div>
