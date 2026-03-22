@@ -24,6 +24,23 @@ import { createSlice } from "@reduxjs/toolkit";
                 item => item.id !== action.payload
             )
         },
+        // to increase the quantity of item by 1
+        increaseQuantity :(state,action)=>{
+            const item = state.items.find(
+                i=> i.id === action.payload
+            )
+            item.quantity += 1
+        },
+        //  to decrease the quantity of item by 1
+         decreaseQuantity :(state,action)=>{
+            const item = state.items.find(
+                i=> i.id === action.payload
+            )
+            if(item.quantity > 1){
+                 item.quantity -= 1
+            }
+        
+        },
         //  to clear the cart completely
         clearCart : (state)=>{
             state.items = []
@@ -31,6 +48,6 @@ import { createSlice } from "@reduxjs/toolkit";
     }
  })
 
- export const{addItem, removeItem, clearCart } = cartSlice.actions
+ export const{addItem, removeItem, increaseQuantity, decreaseQuantity, clearCart } = cartSlice.actions
 
  export default cartSlice.reducer

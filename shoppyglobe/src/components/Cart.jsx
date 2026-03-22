@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import CartItem from "./CartItem"
 import { Link } from "react-router-dom"
+import "./Cart.css"
 
 function Cart() {
     // fetching items from store using useSelector hook
@@ -10,7 +11,7 @@ function Cart() {
     if(items.length == 0) return <h2>Cart Empty</h2>    
 
   return (
-    <div>
+    <div className="cart-container">
         {   
             // passing each item in the cart to cartItem component to display them in UI
             items.map(item =>(
