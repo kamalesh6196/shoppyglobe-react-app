@@ -1,16 +1,29 @@
-# React + Vite
+# ShoppyGlobe Ecommerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React ecommerce application built using:
 
-Currently, two official plugins are available:
+React
+Redux Toolkit
+React Router
+Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Features:
 
-## React Compiler
+Product listing
+Search products
+Product details page
+Add to cart
+Update quantity
+Checkout
+Place order
+Lazy loading
+Routing
+Responsive UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Steps to run:
 
-## Expanding the ESLint configuration
+npm install
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+GitHub repo link:
+https://github.com/kamalesh6196/shoppyglobe-react-app.git
