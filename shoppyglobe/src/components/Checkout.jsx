@@ -10,6 +10,8 @@ function Checkout() {
     const dispatch = useDispatch()
     //  useNavigate to navigate to the page required
     const navigate = useNavigate()
+    //Calculate the total price 
+    const totalPrice = items.reduce((total,item)=>total+item.price*item.quantity,0)
     //  Demo function for placing the order after button click
     function placeOrder(){
         alert("Order placed successfully")
@@ -24,6 +26,19 @@ function Checkout() {
          {/* input to colect name and address of the user */}
         <input type="text" placeholder="name" />
         <input type="text" placeholder="address" />
+         {/* Order summary */}
+         <h3>Order summary</h3>
+         {
+            items.length === 0 ?
+            <p>No Items in Cart</p>
+            :
+            items.map(item=>(
+                <div key={item.id}>
+                    <p>{item.title} x {item.quantity}</p>
+                </div>
+            ))
+         }
+           <h3>Total: ₹ {totalPrice} </h3>
          {/* Button to place order */}
         <button onClick={placeOrder}>Place Order</button>
     </div>
